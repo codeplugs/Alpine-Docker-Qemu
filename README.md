@@ -29,5 +29,17 @@ ping -c 3 8.8.8.8
 ping google.com
 ```
 
-
-
+## FIX DNS: transient error (try again later)   
+run command
+  ```
+  cat > /etc/resolv.conf << EOF
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+EOF
+  ```
+  
+  
+additional
+```
+chattr +i /etc/resolv.conf 2>/dev/null
+```
