@@ -43,3 +43,27 @@ additional
 ```
 chattr +i /etc/resolv.conf 2>/dev/null
 ```
+
+## Install docker
+
+Update repo alpine
+```
+apk update
+```
+
+Install docker alpine
+```
+apk add docker
+```
+
+Enable & start service
+```
+rc-update add docker default
+rc-service docker start
+```
+
+Check status
+```
+rc-service docker status
+```
+
