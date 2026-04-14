@@ -66,4 +66,7 @@ Check status
 ```
 rc-service docker status
 ```
+## Exit qemu terminal
 
+run
+CTRL a then x
